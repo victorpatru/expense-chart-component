@@ -35,7 +35,7 @@ body {
 
 .container {
   display: flex;
-  width: 500px;
+  width: 530px;
   margin: 0 auto;
   flex-direction: column;
   gap: 1.5rem;
@@ -73,24 +73,25 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-pale-orange);
-  height: 400px;
+  height: 450px;
   border-radius: 15px;
 }
 
 .spending-card ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   color: var(--secondary-medium-brown);
   font-size: 14px;
-  margin-top: 160px;
+  margin-top: 15px;
+  margin-right: 10px;
+  align-items: flex-end;
+  height: 170px;
 }
 
 .spending-viz-container {
-  width: 84%;
+  width: 83%;
   margin: 31px auto 20px;
   display: flex;
   flex-direction: column;
@@ -103,7 +104,7 @@ body {
 
 .dividing-line {
   border-top: 2px solid var(--secondary-cream);
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 /* SpendingInfo Component Styling */
@@ -112,5 +113,87 @@ body {
   display: flex;
   justify-content: space-between;
   width: 84%;
-  margin: 0 auto;
+  margin: 18px auto;
+}
+
+.spending-info-container span {
+  color: var(--secondary-medium-brown);
+}
+
+.spending-info-container .month-total {
+  margin-top: 10px;
+  font-size: 2.5rem;
+}
+
+.spending-info-container div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.spending-info-container .month-change {
+  align-self: end;
+  font-size: 1.25rem;
+}
+
+/* Spending Visualization Component */
+
+ul li div {
+  background-color: var(--primary-soft-red);
+  /* height: 150px; */
+  width: 50px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+ul li {
+  text-align: center;
+}
+
+.monday-bar {
+  height: 50px;
+}
+
+.tuesday-bar {
+  height: 75px;
+}
+
+.wednesday-bar {
+  height: 120px;
+}
+
+.thursday-bar {
+  height: 100px;
+}
+
+.friday-bar {
+  height: 25px;
+}
+
+.saturday-bar {
+  height: 80px;
+}
+
+.sunday-bar {
+  height: 60px;
+}
+
+.spending-viz-container li div:nth-of-type(1) {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  display: none;
+}
+
+ul li div:hover {
+  background-color: var(--primary-cyan);
+}
+
+ul li:hover div:nth-of-type(1) {
+  display: flex;
 }
