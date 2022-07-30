@@ -1,10 +1,10 @@
 import React from "react";
 
-function Balance() {
+function BalanceCard() {
   return (
-    <section className="balance-container">
+    <section className="balance-card">
       <div>
-        <span>My Balance</span>
+        <span>My balance</span>
         <span>$921.48</span>
       </div>
       <div>
@@ -24,4 +24,4 @@ function Balance() {
   );
 }
 
-export default Balance;
+export default BalanceCard;
