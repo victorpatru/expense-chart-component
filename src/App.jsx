@@ -1,34 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// Your users should be able to:
+
+// - View the bar chart and hover over the individual bars to see the correct amounts for each day
+// - See the current day's bar highlighted in a different colour to the other bars
+// - View the optimal layout for the content depending on their device's screen size
+// - See hover states for all interactive elements on the page
+// - **Bonus**: See dynamically generated bars based on the data provided in the local JSON file
+import Balance from "./components/Balance";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <main className="container">
+      {/* Balance Component */}
+      <Balance />
+
+      {/* Spending Visualization Component */}
+      <section className="spending-viz-container">
+        <span>Spending - Last 7 days</span>
+        <ul>
+          <li>
+            <span>mon</span>
+          </li>
+          <li>
+            <span>tue</span>
+          </li>
+          <li>
+            <span>wed</span>
+          </li>
+          <li>
+            <span>thu</span>
+          </li>
+          <li>
+            <span>fri</span>
+          </li>
+          <li>
+            <span>sat</span>
+          </li>
+          <li>
+            <span>sun</span>
+          </li>
+        </ul>
+        <div className="dividing-line"></div>
+
+        {/* Spending Information Component */}
+        <section className="spending-info-container">
+          <div>
+            <span>Total this month</span>
+            <span>$478.33</span>
+          </div>
+
+          <div>
+            <span>+2.4%</span>
+            <span>from last month</span>
+          </div>
+        </section>
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;
