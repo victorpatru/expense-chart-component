@@ -1,17 +1,9 @@
-import { useEffect, useState } from "react";
-
 function SpendingInfo({ spendingData }) {
-  const [total, setTotal] = useState();
-
-  useEffect(() => {
-    setTotal(spendingData);
-  }, []);
-
   return (
     <section className="spending-info-container">
       <div>
         <span>Total this month</span>
-        <h2 className="month-total">{`$${total}`}</h2>
+        <h2 className="month-total">{`$${spendingData}`}</h2>
       </div>
 
       <div>

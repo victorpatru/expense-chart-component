@@ -7,25 +7,25 @@ import axios from "axios";
 function SpendingCard() {
   const [spendingData, setSpendingData] = useState();
 
+  const getTotal = data => {
+    return data.reduce((acc, val) => acc + val.amount, 0);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios("src/data/data.json");
-      setSpendingData(result.data);
+      setSpendingData(getTotal(result.data));
     };
 
     fetchData();
-  }, []);
+  }, [spendingData]);
 
   return (
     <section className="spending-card">
       {/* Spending Visualization Component */}
       <SpendingViz />
       {/* Spending Information Component */}
-      <SpendingInfo
-        spendingData={() =>
-          spendingData.reduce((acc, val) => acc + val.amount, 0)
-        }
-      />
+      <SpendingInfo spendingData={spendingData} />
     </section>
   );
 }

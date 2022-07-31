@@ -1,4 +1,12 @@
-function SpendingViz() {
+import { useEffect, useState } from "react";
+
+function SpendingViz({ spendingData }) {
+  //const [data, setData] = useState();
+
+  // useEffect(() => {
+  //   setData(spendingData);
+  // }, []);
+
   return (
     <section className="spending-viz-container">
       <h1>Spending - Last 7 Days</h1>
