@@ -18,7 +18,7 @@ function SpendingCard() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("src/data/data.json");
+      const result = await axios("./src/data/data.json");
       setTotal(getTotal(result.data));
       setSpendingData(weeklySpending(result.data));
     };
