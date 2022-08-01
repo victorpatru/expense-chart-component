@@ -151,23 +151,23 @@ ul li {
 }
 
 .monday-bar {
-  height: 50px;
+  height: 65px;
 }
 
 .tuesday-bar {
-  height: 75px;
+  height: 85px;
 }
 
 .wednesday-bar {
-  height: 120px;
+  height: 130px;
 }
 
 .thursday-bar {
-  height: 100px;
+  height: 70px;
 }
 
 .friday-bar {
-  height: 25px;
+  height: 40px;
 }
 
 .saturday-bar {

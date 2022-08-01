@@ -1,9 +1,9 @@
-function SpendingInfo({ spendingData }) {
+function SpendingInfo({ total }) {
   return (
     <section className="spending-info-container">
       <div>
         <span>Total this month</span>
-        <h2 className="month-total">{`$${spendingData}`}</h2>
+        <h2 className="month-total">{`$${total}`}</h2>
       </div>
 
       <div>
